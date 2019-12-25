@@ -14,7 +14,10 @@ However, it lacks support for PostgreSQL currently, although it does work well o
 
 After much thinking I decided to write this extension library myself
 
-Thank you for your works to reference! orz
+Thank you for your works to reference! Dear **zedisdog(Jialeo)** orz
+
+# System Requirement
+
+* If you use **PostgreSQL** to your default database, you must ensure it's **version >= 9.0**
 
 # Setup
-
