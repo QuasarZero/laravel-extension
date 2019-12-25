@@ -2,6 +2,7 @@
 
     namespace Quasar\Extension\Laravel\Database;
 
+    use Closure;
     use ErrorException;
     use Illuminate\Database\Connection;
     use Illuminate\Database\MySqlConnection;
@@ -14,6 +15,11 @@
 
     /**
      * Created on 2019-12-24 11:44
+     * @method static Builder create(string $tableName, Closure $closure)
+     * @method static Builder drop(string $table)
+     * @method static Builder dropIfExists(string $table)
+     * @method static Builder table(string $table, Closure $callback)
+     * @method static Builder rename(string $from, string $to)
      *
      * @author Quasar
      */
