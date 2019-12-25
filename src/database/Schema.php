@@ -1,6 +1,6 @@
 <?php
 
-    namespace Quasar\Extension\Laravel;
+    namespace Quasar\Extension\Laravel\Database;
 
     use ErrorException;
     use Illuminate\Database\Connection;

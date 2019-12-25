@@ -1,6 +1,6 @@
 <?php
 
-    namespace Quasar\Extension\Laravel;
+    namespace Quasar\Extension\Laravel\Database;
 
     /**
      * Created on 2019-12-24 15:24

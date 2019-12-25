@@ -1,9 +1,9 @@
 <?php
 
-    namespace Quasar\Extension\Laravel;
+    namespace Quasar\Extension\Laravel\Database;
 
+    use Illuminate\Database\Connection;
     use Illuminate\Database\Schema\Blueprint;
-    use Illuminate\Database\Schema\Grammars\PostgresGrammar;
     use Illuminate\Support\Fluent;
 
     /**
@@ -11,20 +11,21 @@
      *
      * @author Quasar
      */
-    class PostgreSQLGrammar extends PostgresGrammar
+    class MySQLGrammar extends \Illuminate\Database\Schema\Grammars\MySqlGrammar
     {
         /**
          * 覆盖重写父类执行统一构建SQL脚本的方法
          *
-         * @param Blueprint $blueprint
-         * @param Fluent    $command
+         * @param Blueprint  $blueprint
+         * @param Fluent     $command
+         * @param Connection $connection
          *
          * @return string
          * @author Quasar
          */
-        public function compileCreate(Blueprint $blueprint, Fluent $command)
+        public function compileCreate(Blueprint $blueprint, Fluent $command, Connection $connection)
         {
-            $sql = parent::compileCreate($blueprint, $command);
+            $sql = parent::compileCreate($blueprint, $command, $connection);
             $sql = $this->compileInject($sql, $blueprint);
 
             return $sql;
@@ -51,21 +52,13 @@
          *
          * @param string    $sql
          * @param Blueprint $blueprint
-         *
          * @author Quasar
-         * @version PostgreSQL >= 9.0
          */
         private function _injectComment(string &$sql, Blueprint $blueprint)
         {
             if(isset($blueprint->comment) && $blueprint->getColumns()){
                 $blueprint->comment = str_replace('\'', '\\\'', $blueprint->comment);
-                $sql                = <<<PGSQL
-DO $$
-BEGIN
-    $sql;
-    COMMENT ON TABLE {$blueprint->getTable()} IS '{$blueprint->comment}';
-END$$;
-PGSQL;
+                $sql                .= " comment = '{$blueprint->comment}'";
             }
         }
     }
