@@ -17,24 +17,26 @@
 
 # Manual
 
-Before you create new migration, set the config of app.aliases.Schema value to
-`Quasar\Extension\Laravel\Database::class`
+Firstly, execute `php artisan quasar:init` to init the library
+
+Secondly, update the config of app.providers, comment out `Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class`, use `Quasar\Extension\Laravel\Console\ConsoleSupportServiceProvider::class` to replace
 
 Like
-
 ```PHP
 [
   // ...
-  'aliases' => [
+  'providers' => [
       // ...
-      # 'Schema' => Illuminate\Support\Facades\Schema::class,
-      'Schema' => Quasar\Extension\Laravel\Database\Schema::class,
+      # 'Schema' => Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class,
+      'Schema' => Quasar\Extension\Laravel\Console\ConsoleSupportServiceProvider::class,
       // ...
   ]
 ];
 ```
 
-For the exist migration, you can replace the use statement to the true source
+Now, all new migration files' schema use statement will specify the custom schema file of this library
+
+For the exist migrations, you must replace the use statement to the true source manually, if you need...orz
 
 Like
 
@@ -42,6 +44,8 @@ Like
 # use Illuminate\Support\Facades\Schema;
 use Quasar\Extension\Laravel\Database\Schema;
 ```
+
+
 
 # Background
 
