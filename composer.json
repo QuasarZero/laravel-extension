@@ -2,14 +2,14 @@
   "name":              "quasar-zero/laravel-extension",
   "type":              "library",
   "description":       "Support some features what native classes or methods doesn't support",
-  "version":           "1.2.0",
+  "version":           "1.2.1",
   "time":              "2019-12-24",
   "license":           "MIT",
   "minimum-stability": "stable",
   "authors":           [
     {
       "name":  "Quasar",
-      "email": "lelouchcctony@163.com",
+      "email": "lelouchcctony@gmail.com",
       "role":  "Creator & Developer"
     }
   ],
