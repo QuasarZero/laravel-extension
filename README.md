@@ -17,9 +17,7 @@
 
 # Manual
 
-Firstly, execute `php artisan quasar:init` to init the library
-
-Secondly, update the config of app.providers, comment out `Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class`, use `Quasar\Extension\Laravel\Console\ConsoleSupportServiceProvider::class` to replace
+Firstly, update the config of app.providers, comment out `Illuminate\Foundation\Providers\ConsoleSupportServiceProvider::class`, use `Quasar\Extension\Laravel\Console\ConsoleSupportServiceProvider::class` to replace
 
 Like
 ```PHP
@@ -33,6 +31,8 @@ Like
   ]
 ];
 ```
+
+Second, execute `php artisan quasar:init` to init the library
 
 Now, all new migration files' schema use statement will specify the custom schema file of this library
 
