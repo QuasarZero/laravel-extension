@@ -5,9 +5,11 @@
 * Support add table comment when you use Schema Facade to create table in migration script. MySQL, PostgreSQL are available now
 * Make your Route Facade can find its methods
 
+
 # System Requirement
 
 * If you use **PostgreSQL** to your default database, you must ensure it's **version >= 9.0**
+
 
 # Install
 
@@ -46,7 +48,6 @@ use Quasar\Extension\Laravel\Database\Schema;
 ```
 
 
-
 # Background
 
 You will find these are less the functions for set table comment, when you get use the **Laravel Facade** utility of `Illuminate\Support\Facades\Schema`, and the code completion does not work when use PhpStorm to call methods of `Illuminate\Support\Facades\Route` 
@@ -60,6 +61,7 @@ And then, for `Illuminate\Support\Facades\Route`, there is a helper library, [ba
 It is a full volume helper, will generate some redundant stuffs you and I don't need  
 
 So I prepare this package to integrate our common requirement
+
 
 # Thanks
 
