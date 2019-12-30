@@ -3,7 +3,7 @@
 # Feature
 
 * Support add table comment when you use Schema Facade to create table in migration script. MySQL, PostgreSQL are available now
-* Make your Route Facade can find its methods
+* Make some Facades and objects can find their methods
 
 
 # System Requirement

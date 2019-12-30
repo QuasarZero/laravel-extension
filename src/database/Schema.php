@@ -20,6 +20,10 @@
      * @method static Builder dropIfExists(string $table)
      * @method static Builder table(string $table, Closure $callback)
      * @method static Builder rename(string $from, string $to)
+     * @method static array getColumnListing(string $table) Get the column listing for a given table.
+     * @method static Connection getConnection()
+     * @method static boolean hasTable(string $table)
+     * @method static boolean hasColumn(string $table, string $column)
      *
      * @author Quasar
      */
