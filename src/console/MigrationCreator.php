@@ -36,7 +36,7 @@
         protected function populateStub($name, $stub, $table)
         {
             $stub   = parent::populateStub($name, $stub, $table);
-            $schema = config('quasar.migrate.schema_file', self::SCHEMA);
+            $schema = config('quasar.database.migrate.schema', self::SCHEMA);
 
             return str_replace('SCHEMA_PATH', $schema, $stub);
         }

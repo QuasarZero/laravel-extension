@@ -4,6 +4,7 @@
 
 * Support add table comment when you use Schema Facade to create table in migration script. MySQL, PostgreSQL are available now
 * Make some Facades and objects can find their methods
+* Add database native message resolver 
 
 
 # System Requirement
