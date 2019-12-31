@@ -27,12 +27,24 @@
             try{
                 /** @var MessageResolveHandler $handler */
                 $handler = (new ReflectionClass(self::_getHandler()[ $defaultDatabaseType ]))->newInstance();
-                $message = $handler->handle($message);
+                $message = self::_filter($handler)->handle($message);
             }catch(ReflectionException $reflectionException){
                 return $message;
             }
 
             return $message;
+        }
+
+        /**
+         * Class object filter
+         *
+         * @param MessageResolveHandler $messageResolveHandler
+         *
+         * @return MessageResolveHandler
+         */
+        private static function _filter(MessageResolveHandler $messageResolveHandler)
+        {
+            return $messageResolveHandler;
         }
 
         /**
