@@ -6,6 +6,8 @@ use Illuminate\Database\Migrations\Migration;
 
 class DummyClass extends Migration
 {
+    const TABLE_NAME = 'YOUR TABLE NAME';
+
     /**
      * Run the migrations.
      *
@@ -13,9 +15,10 @@ class DummyClass extends Migration
      */
     public function up()
     {
-        Schema::create('DummyTable', function (Blueprint $table) {
+        Schema::create(self::TABLE_NAME, function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
+            $table->comment = '';
         });
     }
 
@@ -26,6 +29,6 @@ class DummyClass extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('DummyTable');
+        Schema::dropIfExists(self::TABLE_NAME);
     }
 }

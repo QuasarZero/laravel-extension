@@ -6,6 +6,8 @@ use Illuminate\Database\Migrations\Migration;
 
 class DummyClass extends Migration
 {
+    const TABLE_NAME = 'YOUR TABLE NAME';
+
     /**
      * Run the migrations.
      *
