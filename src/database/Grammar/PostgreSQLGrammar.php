@@ -1,6 +1,6 @@
 <?php
 
-    namespace Quasar\Extension\Laravel\Database;
+    namespace Quasar\Extension\Laravel\Database\Grammar;
 
     use Illuminate\Database\Schema\Blueprint;
     use Illuminate\Database\Schema\Grammars\PostgresGrammar;

@@ -12,6 +12,10 @@
     use Illuminate\Database\SQLiteConnection;
     use Illuminate\Database\SqlServerConnection;
     use Illuminate\Support\Facades\Facade;
+    use Quasar\Extension\Laravel\Database\Grammar\MySQLGrammar;
+    use Quasar\Extension\Laravel\Database\Grammar\PostgreSQLGrammar;
+    use Quasar\Extension\Laravel\Database\Grammar\SQLiteGrammar;
+    use Quasar\Extension\Laravel\Database\Grammar\SQLServerGrammar;
 
     /**
      * Created on 2019-12-24 11:44

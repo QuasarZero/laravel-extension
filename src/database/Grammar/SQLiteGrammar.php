@@ -1,6 +1,6 @@
 <?php
 
-    namespace Quasar\Extension\Laravel\Database;
+    namespace Quasar\Extension\Laravel\Database\Grammar;
 
     /**
      * Created on 2019-12-24 15:24

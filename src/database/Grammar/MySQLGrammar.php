@@ -1,6 +1,6 @@
 <?php
 
-    namespace Quasar\Extension\Laravel\Database;
+    namespace Quasar\Extension\Laravel\Database\Grammar;
 
     use Illuminate\Database\Connection;
     use Illuminate\Database\Schema\Blueprint;
@@ -52,6 +52,7 @@
          *
          * @param string    $sql
          * @param Blueprint $blueprint
+         *
          * @author Quasar
          */
         private function _injectComment(string &$sql, Blueprint $blueprint)

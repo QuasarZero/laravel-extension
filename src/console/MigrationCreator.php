@@ -70,6 +70,6 @@
          */
         public function stubPath()
         {
-            return __DIR__.'/stubs';
+            return __DIR__.'/MigrationTemplate';
         }
     }
