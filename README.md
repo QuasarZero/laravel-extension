@@ -51,8 +51,14 @@ use Quasar\Extension\Laravel\Database\Schema;
 
 When QueryException throw some native database exception message, you can `\Quasar\Extension\Laravel\Database\MessageResolver::handle($exception->getMessage()`, the handle method will return humanized output in my design. And default, I don't integrate the handler, you must make handler implement the interface `Quasar\Extension\Laravel\Database\MessageResolveHandler`.
 
-If you want to check the execute sql when use ORM methods, please call `dump_sql()` function before run the ORM methods.
+If you want to check the execute sql when use ORM methods, please call `dump_sql()` function before run the ORM methods. Of course, please register the `Quasar\Extension\Laravel\Listener\DatabaseExecuteListener::class` to the **listen** property on the service provider of `App\Providers\EventServiceProvider`, before you do it. 
 
+Like
+
+```php
+dump_sql();
+UserModel::where('id', '=', 1)->get();
+```
 
 # Background
 
