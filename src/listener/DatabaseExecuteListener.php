@@ -31,6 +31,9 @@
             if(Session::get('_OUTPUT_SQL_SWITCH')){
                 if(Session::get('_OUTPUT_SQL_PRINT_MODE')) print_r($log);
                 else dump($log);
+                if(Session::get('_OUTPUT_SQL_PRINT_CONTINUOUSLY')){
+                    Session::put('_OUTPUT_SQL_PRINT_MODE', false);
+                }
             }
         }
     }
