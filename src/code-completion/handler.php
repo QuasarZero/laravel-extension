@@ -13,3 +13,15 @@
         {
         }
     }
+
+    namespace Illuminate\Support\Facades
+    {
+
+        /**
+         * @method static string get(string $name, mixed $default = null)
+         */
+        class Request
+        {
+
+        }
+    }
