@@ -17,11 +17,22 @@
     namespace Illuminate\Support\Facades
     {
 
+        use Doctrine\DBAL\Schema\AbstractSchemaManager;
+
         /**
          * @method static string get(string $name, mixed $default = null)
          */
         class Request
         {
+        }
 
+        /**
+         * @method static AbstractSchemaManager getDoctrineSchemaManager Get the Doctrine DBAL schema manager for the
+         *         connection.
+         *
+         * @package Illuminate\Support\Facades
+         */
+        class DB
+        {
         }
     }
