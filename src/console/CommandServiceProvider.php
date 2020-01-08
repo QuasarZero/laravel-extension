@@ -12,7 +12,8 @@
     class CommandServiceProvider extends ServiceProvider
     {
         protected $commands = [
-            'command.quasar.init'
+            'command.quasar.init',
+            'command.make.service'
         ];
 
         public function __construct($app)
@@ -40,6 +41,10 @@
             $this->app->singleton('command.quasar.init', function ()
             {
                 return new InitCommand();
+            });
+            $this->app->singleton('command.make.service', function ()
+            {
+                return new MakeServiceCommand();
             });
             $this->commands($this->commands);
         }
