@@ -2,7 +2,7 @@
   "name":              "quasar-zero/laravel-extension",
   "type":              "library",
   "description":       "Support some features what native classes or methods do not support on the Laravel",
-  "version":           "1.6.0",
+  "version":           "1.7.0",
   "time":              "2019-12-24",
   "license":           "MIT",
   "minimum-stability": "stable",
