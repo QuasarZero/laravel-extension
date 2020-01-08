@@ -96,14 +96,12 @@
             $currentTime = date('Y-m-d H:i:s');
             $parentClass = config('quasar.console.make.service.parent_class', '');
             $creator     = config('quasar.console.make._creator');
-            if($parentClass) $parentClass .= "extends {$parentClass}";
-            if($creator) $creator .= "@author {$creator}";
+            if($parentClass) $parentClass = "extends {$parentClass}";
+            if($creator) $creator = "@author {$creator}";
 
             return <<<PHP7
 <?php
     namespace App\Services{$templateConfig['namespace']};
-    
-    use App\Services\CoreService;
 
     /**
      * Created on {$currentTime}
