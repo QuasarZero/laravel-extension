@@ -12,6 +12,7 @@ class DummyClass extends Migration
      * Run the migrations.
      *
      * @return void
+     * @noinspection PhpUndefinedFieldInspection
      */
     public function up()
     {
